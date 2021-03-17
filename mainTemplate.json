@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "profile_name": {
-      "defaultValue": "profile",
+      "defaultValue": "profiles",
       "type": "String",
       "metadata": {
-        "description": "Name of the storage account and webapp"
+        "description": "Name of the storage account and webapp - must be globally unique!"
       }
     },
     "admin_password": {
