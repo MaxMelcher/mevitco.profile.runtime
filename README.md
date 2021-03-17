@@ -37,7 +37,7 @@ Deployment takes roughly 30 seconds.
 
 ## Post-Deployment Configuration
 
-After deployment (~30 seconds), you need to change the docker container. See installation / configuration guide [https://profile.mevitco.de/installation]
+After deployment (~30 seconds), you need to change the docker container. See installation / configuration guide [https://profile.mevitco.de/installation](https://profile.mevitco.de/installation)
 
 ## Customer Usage Attribution
 
