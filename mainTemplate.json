@@ -9,13 +9,6 @@
         "description": "Name of the storage account and webapp"
       }
     },
-    "location": {
-      "defaultValue": "[resourceGroup().location]",
-      "type": "String",
-      "metadata": {
-        "description": "Location for both the storage account and the webapp"
-      }
-    },
     "admin_password": {
       "defaultValue": "",
       "type": "String",
@@ -39,7 +32,7 @@
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2019-06-01",
       "name": "[variables('storage_name')]",
-      "location": "[parameters('location')]",
+      "location": "[resourceGroup().location]",
       "sku": {
         "name": "Standard_RAGRS",
         "tier": "Standard"
@@ -71,7 +64,7 @@
       "type": "Microsoft.Web/serverfarms",
       "apiVersion": "2018-02-01",
       "name": "[parameters('profile_name')]",
-      "location": "[parameters('location')]",
+      "location": "[resourceGroup().location]",
       "sku": {
         "name": "P1v2",
         "tier": "PremiumV2",
@@ -384,20 +377,6 @@
       "dependsOn": [
         "[concat('Microsoft.Web/sites/', parameters('profile_name'))]"
       ]
-    },
-    {
-      "apiVersion": "2018-02-01",
-      "name": "pid-3cb5a690-babe-4b08-9efe-3173632bd010-partnercenter",
-      "type": "Microsoft.Resources/deployments",
-      "properties": {
-        "mode": "Incremental",
-        "template": {
-          "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-          "contentVersion": "1.0.0.0",
-          "resources": [
-          ]
-        }
-      }
     },
     {
       "apiVersion": "2018-02-01",
