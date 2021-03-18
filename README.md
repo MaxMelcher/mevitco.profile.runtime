@@ -30,6 +30,9 @@ The parameters that you need to provide:
 * Region (Azure region to deploy both the Storage and the App Service)
 * Admin Password (required to access statistics and setup page)
 * Admin Email (required to show the statistics and setup page, requires authentication)
+* Azure Container Registry Login Server, e.g mevitco.azurecr.io
+* Azure Container Registry Username
+* Azure Container Registry Password
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMaxMelcher%2Fmevitco.profile.runtime%2Fmain%2FmainTemplate.json)
 
@@ -37,7 +40,9 @@ Deployment takes roughly 30 seconds.
 
 ## Post-Deployment Configuration
 
-After deployment (~30 seconds), you need to change the docker container. See installation / configuration guide [https://profile.mevitco.de/installation](https://profile.mevitco.de/installation)
+After deployment (~30 seconds). Afterwards the container will be automatically downloaded and provisioned (~60 seconds).
+
+Afterwards you can configure the solution: [https://profile.mevitco.de/installation](https://profile.mevitco.de/installation)
 
 ## Customer Usage Attribution
 
