@@ -42,6 +42,8 @@ Deployment takes roughly 30 seconds.
 
 After deployment (~30 seconds). Afterwards the container will be automatically downloaded and provisioned (~60 seconds).
 
+It will be available at https://[yourname].azurewebsites.net
+
 Afterwards you can configure the solution: [https://profile.mevitco.de/installation](https://profile.mevitco.de/installation)
 
 ## Customer Usage Attribution
