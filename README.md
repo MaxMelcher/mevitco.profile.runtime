@@ -26,7 +26,7 @@ The parameters that you need to provide:
 
 * Subscription
 * Resource Group (new or existing)
-* Profile name: the name of the website and the storage account. Must be globally unique. Please check [yourname].azurewebsites.net for availability before you deploy.
+* Profile Name: the name of the website and the storage account. Must be globally unique. Please check [yourname].azurewebsites.net for availability before you deploy.
 * Region (Azure region to deploy both the Storage and the App Service)
 * Admin Password (required to access statistics and setup page)
 * Admin Email (required to show the statistics and setup page, requires authentication)
@@ -42,7 +42,7 @@ Deployment takes roughly 30 seconds.
 
 After deployment (~30 seconds). Afterwards the container will be automatically downloaded and provisioned (~60 seconds).
 
-It will be available at https://[yourname].azurewebsites.net
+It will be available at https://[Profile Name].azurewebsites.net (replace the Profile Name with the name you provided during provisioning).
 
 Afterwards you can configure the solution: [https://profile.mevitco.de/installation](https://profile.mevitco.de/installation)
 
