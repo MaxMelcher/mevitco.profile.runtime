@@ -22,6 +22,27 @@
       "metadata": {
         "description": "The admin email of the application"
       }
+    },
+    "acr_loginserver": {
+      "defaultValue": "",
+      "type": "String",
+      "metadata": {
+        "description": "The login server of the azure container registry containing the Mevitco Profile Container, e.g. mevitco.azurecr.io"
+      }
+    },
+    "acr_username": {
+      "defaultValue": "",
+      "type": "String",
+      "metadata": {
+        "description": "The username of the azure container registry containing the Mevitco Profile Container"
+      }
+    },
+    "acr_password": {
+      "defaultValue": "",
+      "type": "String",
+      "metadata": {
+        "description": "The password of the azure container registry containing the Mevitco Profile Container"
+      }
     }
   },
   "variables": {
@@ -162,8 +183,16 @@
               "value": "true"
             },
             {
+              "name": "DOCKER_REGISTRY_SERVER_URL",
+              "value": "[parameters('acr_loginserver')]"
+            },
+            {
+              "name": "DOCKER_REGISTRY_SERVER_USERNAME",
+              "value": "[parameters('acr_username')]"
+            },
+            {
               "name": "DOCKER_REGISTRY_SERVER_PASSWORD",
-              "value": "95649c00-06c0-4343-879f-e73dacac791c"
+              "value": "[parameters('acr_password')]"
             },
             {
               "name": "Mevitco__auth__admin",
@@ -299,7 +328,7 @@
           "hostingstart.html"
         ],
         "netFrameworkVersion": "v4.0",
-        "linuxFxVersion": "DOCKER|nginx",
+        "linuxFxVersion": "[concat('DOCKER|', parameters('acr_loginserver'), '/profile:latest')]",
         "requestTracingEnabled": false,
         "remoteDebuggingEnabled": false,
         "remoteDebuggingVersion": "VS2019",
