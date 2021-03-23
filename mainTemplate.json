@@ -328,7 +328,7 @@
           "hostingstart.html"
         ],
         "netFrameworkVersion": "v4.0",
-        "linuxFxVersion": "[concat('DOCKER|', parameters('acr_loginserver'), '/profile:latest')]",
+        "linuxFxVersion": "[concat('DOCKER|', 'mevitco', '/profile:latest')]",
         "requestTracingEnabled": false,
         "remoteDebuggingEnabled": false,
         "remoteDebuggingVersion": "VS2019",
