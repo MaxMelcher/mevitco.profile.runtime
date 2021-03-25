@@ -4,20 +4,22 @@
   "parameters": {
     "profile_name": {
       "defaultValue": "profiles",
+      "minLength": 1,
       "type": "String",
       "metadata": {
         "description": "Name of the storage account and webapp - must be globally unique!"
       }
     },
     "admin_password": {
-      "defaultValue": "",
       "type": "String",
+      "minLength": 8,
       "metadata": {
-        "description": "The admin password of the application"
+        "description": "The admin password of the application, at least 8 characters"
       }
     },
     "admin_email": {
       "defaultValue": "",
+      "minLength": 1,
       "type": "String",
       "metadata": {
         "description": "The admin email of the application"
@@ -25,6 +27,7 @@
     },
     "acr_loginserver": {
       "defaultValue": "",
+      "minLength": 1,
       "type": "String",
       "metadata": {
         "description": "The login server of the azure container registry containing the Mevitco Profile Container, e.g. mevitco.azurecr.io"
@@ -32,6 +35,7 @@
     },
     "acr_username": {
       "defaultValue": "",
+      "minLength": 1,
       "type": "String",
       "metadata": {
         "description": "The username of the azure container registry containing the Mevitco Profile Container"
@@ -39,6 +43,7 @@
     },
     "acr_password": {
       "defaultValue": "",
+      "minLength": 1,
       "type": "String",
       "metadata": {
         "description": "The password of the azure container registry containing the Mevitco Profile Container"
