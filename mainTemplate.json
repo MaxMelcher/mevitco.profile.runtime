@@ -184,7 +184,7 @@
             },
             {
               "name": "DOCKER_REGISTRY_SERVER_URL",
-              "value": "[parameters('acr_loginserver')]"
+              "value": "[concat('https://',parameters('acr_loginserver'))]"
             },
             {
               "name": "DOCKER_REGISTRY_SERVER_USERNAME",
