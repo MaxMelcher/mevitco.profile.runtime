@@ -3,11 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "profile_name": {
-      "defaultValue": "profiles",
       "minLength": 1,
       "type": "String",
       "metadata": {
-        "description": "Name of the storage account and webapp - must be globally unique!"
+        "description": "Name of the storage account and webapp - must be globally unique! Website will be available at <name>.azurewebsites.net"
       }
     },
     "admin_password": {
@@ -18,7 +17,6 @@
       }
     },
     "admin_email": {
-      "defaultValue": "",
       "minLength": 1,
       "type": "String",
       "metadata": {
@@ -26,7 +24,6 @@
       }
     },
     "acr_loginserver": {
-      "defaultValue": "",
       "minLength": 1,
       "type": "String",
       "metadata": {
@@ -34,7 +31,6 @@
       }
     },
     "acr_username": {
-      "defaultValue": "",
       "minLength": 1,
       "type": "String",
       "metadata": {
@@ -42,7 +38,6 @@
       }
     },
     "acr_password": {
-      "defaultValue": "",
       "minLength": 1,
       "type": "String",
       "metadata": {
