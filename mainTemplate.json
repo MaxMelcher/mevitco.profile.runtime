@@ -4,6 +4,7 @@
   "parameters": {
     "profile_name": {
       "minLength": 1,
+      "defaultValue": "profile123",
       "type": "String",
       "metadata": {
         "description": "Name of the storage account and webapp - must be globally unique! Website will be available at <name>.azurewebsites.net"
@@ -46,21 +47,14 @@
     },
     "location": {
       "type": "string",
-      "defaultValue": "[resourceGroup().location]"
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Location for all resources."
+      }
     }
   },
   "variables": {
     "storage_name": "[take(toLower(concat(parameters('profile_name'), uniqueString(resourceGroup().id))), 24)]"
-  },
-  "outputs": {
-    "location": {
-      "type": "string",
-      "value": "[parameters('location')]"
-    },
-    "website": {
-      "type": "string",
-      "value": "[concat('https://', parameters('profile_name'), '.azurewebsites.net')]"
-    }
   },
   "resources": [
     {
@@ -354,7 +348,6 @@
         "loadBalancing": "LeastRequests",
         "autoHealEnabled": false,
         "localMySqlEnabled": false,
-        "managedServiceIdentityId": null,
         "ipSecurityRestrictions": [
           {
             "ipAddress": "Any",
@@ -419,5 +412,16 @@
         }
       }
     }
-  ]
+  ],
+  "outputs": {
+    "location": {
+      "type": "string",
+      "value": "[parameters('location')]"
+    },
+    "website": {
+      "type": "string",
+      "value": "[concat('https://', parameters('profile_name'), '.azurewebsites.net')]"
+    }
+  }
 }
+
