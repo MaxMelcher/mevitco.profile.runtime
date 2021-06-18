@@ -59,7 +59,7 @@
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
-      "apiVersion": "2019-06-01",
+      "apiVersion": "2021-04-01",
       "name": "[variables('storage_name')]",
       "location": "[parameters('location')]",
       "sku": {
@@ -288,7 +288,7 @@
             },
             {
               "name": "Mevitco__storage__connectionstring",
-              "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storage_name'), ';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storage_name')), '2018-07-01').keys[0].value)]"
+              "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storage_name'), ';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storage_name')), '2021-04-01').keys[0].value)]"
             },
             {
               "name": "WEBSITE_HTTPLOGGING_RETENTION_DAYS",
@@ -387,7 +387,7 @@
       }
     },
     {
-      "apiVersion": "2018-07-01",
+      "apiVersion": "2020-10-01-preview",
       "type": "Microsoft.Web/sites/providers/roleAssignments",
       "name": "[concat(parameters('profile_name'), '/Microsoft.Authorization/', guid(uniqueString(parameters('profile_name'))))]",
       "properties": {
