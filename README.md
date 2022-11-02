@@ -44,7 +44,7 @@ After deployment (~30 seconds). Afterwards the container will be automatically d
 
 It will be available at https://[Profile Name].azurewebsites.net (replace the Profile Name with the name you provided during provisioning).
 
-Afterwards you can configure the solution: [https://profile.mevitco.de/installation](https://profile.mevitco.de/installation)
+Afterwards you can configure the solution: [https://profile-kb.mevitco.de/installation](https://profile-kb.mevitco.de/installation)
 
 ## Customer Usage Attribution
 
