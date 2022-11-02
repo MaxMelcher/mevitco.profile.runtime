@@ -231,10 +231,6 @@
               "value": "true"
             },
             {
-              "name": "Mevitco__auth__validateAuthority",
-              "value": "true"
-            },
-            {
               "name": "Mevitco__default__allowedFileExtensions",
               "value": "docx, doc, odt, rtf, wps, wpd, wks, xls, xlsx, ods, xlr, bak, cap, cfg, cpl, cur, dll, dmp, drv, icns, ini, lnk, msi, sys, tmp, part, ppt, pptx, key, odp, pps, txt, csv, pdf, xml, zip, 7z, arj, deb, pkg, rar, rpm, gz, z, tar, eml, emlx, ics, mbox, msg, oft, ost, pst, tnef, vcf, pfx, crt, cad, dxf, ai, bmp, gif, ico, jpeg, jpg, png, psd, svg, tif, tiff, aif, cda, mid, midi, mp3, mpa, ogg, wav, wma, wpl, bin, dmg, iso, toast, vcd, dat, db, dbf, log, mdb, sav, sql, fnt, fon, otf, ttf, 3g2, 3gp, avi, flv, h264, m4v, mkv, mov, mp4, mpg, mpeg, mpe, rm, swf, vob, wmv"
             },
